@@ -24,7 +24,13 @@ body {
   margin: 0;
   padding: 0;
 }
-    
+
+body.body-strobe {
+    background : white;
+    -webkit-animation:strobe 0.1s linear infinite;
+    -moz-animation:strobe 0.1s linear infinite;
+    animation:strobe 0.1s linear infinite;
+}
 
 #bild {
     display: flex;
@@ -33,6 +39,17 @@ body {
     -webkit-animation:spin 4s linear infinite;
     -moz-animation:spin 4s linear infinite;
     animation:spin 4s linear infinite;
+}
+
+#lob_bild {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  opacity: 0.5;
+  display: none;
+  width: 10%;
+  height: 10%;
+  z-index: 10;
 }
 
 .head {
@@ -86,4 +103,8 @@ img#prippan.prippan-drink {
   50% {
     transform: translateY(-376px) rotate(-115deg); 
   }
+}
+
+@keyframes strobe {
+  50% { background:black; color:white; }
 }
