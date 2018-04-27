@@ -32,17 +32,14 @@
         }, 10500);
 
           function add_strobe () {
-            var frog = document.getElementById("bild");
             var prippan = document.getElementById("prippan");
             if (toggle_strobe === true) {
               var body = document.getElementById("body").classList.add("body-strobe")
-              frog.style.display = "none";
               audio.play();
               prippan.src="src/jelzin.jpg";
               toggle_strobe = false;
             } else {
               var body = document.getElementById("body").classList.remove("body-strobe")
-              frog.style.display = "flex";
               audio.pause();
               prippan.src="src/prippan.png";
               toggle_strobe = true;
