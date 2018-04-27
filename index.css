@@ -34,3 +34,56 @@ body {
     -moz-animation:spin 4s linear infinite;
     animation:spin 4s linear infinite;
 }
+
+.head {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 1100px;
+  height: 100%;
+  opacity: 0;
+  animation: fade 10s normal forwards ease-in-out;
+}
+
+.head#glow {
+  opacity: 1;
+  display: none;
+}
+
+@keyframes fade {
+  100% { opacity: 1 }
+}
+
+img#prippan {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(calc(100%));
+  z-index: 2;
+  display: none;
+  right: 10%;
+}
+
+img#prippan.prippan-animate {
+  animation: slideUp 10s normal forwards ease-in-out;
+}
+
+img#prippan.prippan-drink {
+  animation: drink 5s infinite ease-in-out;
+}
+
+@keyframes slideUp {
+  100% {
+    transform: translateY(-376px);
+  }
+}
+
+@keyframes drink {
+  0%, 100% {
+    transform: translateY(-376px) rotate(0); 
+  }
+
+  50% {
+    transform: translateY(-376px) rotate(-115deg); 
+  }
+}
