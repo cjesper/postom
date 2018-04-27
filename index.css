@@ -47,8 +47,8 @@ body.body-strobe {
   left: 10px;
   opacity: 0.5;
   display: none;
-  width: 10%;
-  height: 10%;
+  width: 20%;
+  height: 20%;
   z-index: 10;
 }
 
