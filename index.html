@@ -4,8 +4,25 @@
       <link href="index.css" rel="stylesheet" />
     </header>
   <body>
+      <img class="head" src="src/head.png" />
+      <img class="head" id="glow" src="src/head_glow.png" />
+      <img id="prippan" src="src/prippan.png" />
       <div id="bild">
         <img class="image" src="./src/fredag.png">    
       </div>
+
+      <script>
+        setTimeout(() => {
+          document.getElementById('glow').style.display = "block";
+          var prippan = document.getElementById("prippan");
+          prippan.style.display = "block";
+          prippan.classList.add("prippan-animate");
+
+          setTimeout(() => {
+            prippan.classList.add("prippan-drink");
+          }, 10000);
+
+        }, 10500);
+      </script>
   </body>
 </html>
