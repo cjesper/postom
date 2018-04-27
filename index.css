@@ -1,0 +1,36 @@
+.image {
+    -webkit-animation:width_change 4s linear infinite;
+    -moz-animation:width_change 4s linear infinite;
+    animation:width_change 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+@keyframes width_change{
+    0% {  
+      width: 10%; 
+    }
+    100% {
+      width: 60%
+    }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(red,purple,orange) 
+}
+    
+
+#bild {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    width: 100%;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
