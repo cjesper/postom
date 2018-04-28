@@ -72,6 +72,20 @@ body.body-strobe {
   100% { opacity: 1 }
 }
 
+#counter {
+  position: absolute;
+  bottom: 20px;
+  right: 5px;
+  color: yellow;
+  font-size: 86px;
+}
+
+#valborg {
+  position: absolute;
+  bottom: 5px;
+  color : yellow;
+  font-size: 56px;
+}
 img#prippan {
   position: absolute;
   bottom: 0;
@@ -108,3 +122,6 @@ img#prippan.prippan-drink {
 @keyframes strobe {
   50% { background:black; color:white; }
 }
+
+
+

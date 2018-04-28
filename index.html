@@ -12,10 +12,14 @@
         <img class="image" src="./src/fredag.png">    
       </div>
       <img onclick="add_strobe()" id="lob_bild" src="src/lob.JPG" />
-
+      <h3 id="counter">1</h3>
+      <a target="_blank" href="https://www.youtube.com/watch?v=K8M7fFwdM9w" id="valborg">Det börjar närma sig Valborg, mina vänner.  </a>
       <script>
         var audio = new Audio('src/scooter.mp3');
-
+        var counter = 0;
+        var counter_element = document.getElementById('counter');
+        counter_element.innerHTML = counter;
+        counter_element.style.display = "none"; 
         var toggle_strobe = true;
         setTimeout(() => {
           document.getElementById('glow').style.display = "block";
@@ -27,6 +31,13 @@
             prippan.classList.add("prippan-drink");
             var lob_bild = document.getElementById("lob_bild");
             lob_bild.style.display = "block";
+            counter++;
+            counter_element.innerHTML = counter;
+            counter_element.style.display = "block"; 
+            setInterval(() => {
+                counter++;
+                counter_element.innerHTML = counter;
+            }, 5000);
           }, 10000);
 
         }, 10500);
