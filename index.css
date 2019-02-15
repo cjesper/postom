@@ -46,9 +46,9 @@ body.body-strobe {
   top: 10px;
   left: 10px;
   opacity: 1;
-  display: none;
-  width: 20%;
-  height: 20%;
+  display: block;
+  width: 30%;
+  height: 30%;
   z-index: 10;
 }
 
