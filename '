@@ -90,37 +90,29 @@
         }
       } 
 
-      function spawn_coins () {
+      function spawn_coins {
           for (i = 1; i < 30; i++) {
             var offset = 50 + Math.random()*10
             var coin = document.getElementById("coin" + i) 
-            coin.style.left = 10 + i*50
+            coin.style.left = 10 + i*10
           }
       } 
 
       function stop_money() {
+        var coin1 = document.getElementById("coin1") 
+        coin1.style.top = -200
         clearInterval(rainInterval)
-        for (i = 1; i < 30; i++) {
-          var offset = 50 + Math.random()*10
-          var coin = document.getElementById("coin" + i) 
-          coin.style.top = -200
-        }
       }
 
       function rain_money () {
-          var coinOffsets = new Array(29).fill(0)
-          coinOffsets = coinOffsets.map(x => x -= Math.random() * innerHeight)
         rainInterval = setInterval(function () {
           for (i = 1; i < 30; i++) {
             var offset = 50 + Math.random()*10
-            coinOffsets[i-1] += offset
             var coin = document.getElementById("coin" + i) 
-            coin.style.top = coinOffsets[i-1]
-            console.log(coinOffsets)
-            if (coinOffsets[i-1] > innerHeight) {
+            coin.style.top += offset
+              if (coin.style.top > window.innerHeight) {
                 coin.style.top = -200
-                coinOffsets[i-1] = 0
-            }
+              }
           }
         } , 100)
       } 

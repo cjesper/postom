@@ -26,7 +26,7 @@ body {
 }
 
 body.body-strobe {
-    background : white;
+    background : gold;
     -webkit-animation:strobe 0.1s linear infinite;
     -moz-animation:strobe 0.1s linear infinite;
     animation:strobe 0.1s linear infinite;
@@ -45,7 +45,7 @@ body.body-strobe {
   position: absolute;
   top: 10px;
   left: 10px;
-  opacity: 0.5;
+  opacity: 1;
   display: none;
   width: 20%;
   height: 20%;
@@ -78,6 +78,13 @@ body.body-strobe {
   right: 5px;
   color: yellow;
   font-size: 86px;
+}
+
+.coin {
+  position: fixed;
+  top: -200px;
+  transition-duration: 0.1s;
+  z-index:100;
 }
 
 #valborg {
@@ -120,7 +127,7 @@ img#prippan.prippan-drink {
 }
 
 @keyframes strobe {
-  50% { background:black; color:white; }
+  50% { background:black; color:gold; }
 }
 
 
