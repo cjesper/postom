@@ -54,6 +54,7 @@
         counter_element.innerHTML = counter;
         counter_element.style.display = "none"; 
         var toggle_strobe = true;
+
         setTimeout(() => {
           document.getElementById('glow').style.display = "block";
           var prippan = document.getElementById("prippan");
@@ -73,7 +74,7 @@
             }, 5000);
           }, 10000);
 
-        }, 10500);
+        }, 50);
 
       function add_strobe () {
         var prippan = document.getElementById("prippan");
